@@ -1,1 +1,1 @@
-{"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/Users/Leoal/Documents/Programção/Devops/Vagrant/ambiente_dev/bionic","disabled":false,"__vagrantfile":true}}}
+{"virtualbox":{"/configs":{"guestpath":"/configs","hostpath":"C:/Users/Leoal/Documents/Programção/Git/alura.devops/Vagrant/ambiente_dev/bionic/configs","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/Users/Leoal/Documents/Programção/Git/alura.devops/Vagrant/ambiente_dev/bionic","disabled":false,"__vagrantfile":true}}}
