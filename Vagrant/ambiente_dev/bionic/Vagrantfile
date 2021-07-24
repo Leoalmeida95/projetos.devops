@@ -7,21 +7,21 @@ SCRIPT
 Vagrant.configure("2") do |config|
     config.vm.box = "ubuntu/bionic64"
 
-    config.vm.define "mysqldb" do |mysql|
-      mysql.vm.network "public_network", ip: "192.168.1.20"
+    # config.vm.define "mysqldb" do |mysql|
+    #   mysql.vm.network "public_network", ip: "192.168.1.20"
 
-      mysql.vm.provision "shell", inline: $script_mysql
+    #   mysql.vm.provision "shell", inline: $script_mysql
 
-      mysql.vm.provision "shell", 
-        inline: "cat /configs/id_bionic.pub >> .ssh/authorized_keys"
-        mysql.vm.provision "shell", 
-        inline: "cat /configs/mysqld.cnf > /etc/mysql/mysql.conf.d/mysqld.cnf"
-        mysql.vm.provision "shell", 
-        inline: "service mysql restart"
+    #   mysql.vm.provision "shell", 
+    #     inline: "cat /configs/id_bionic.pub >> .ssh/authorized_keys"
+    #     mysql.vm.provision "shell", 
+    #     inline: "cat /configs/mysqld.cnf > /etc/mysql/mysql.conf.d/mysqld.cnf"
+    #     mysql.vm.provision "shell", 
+    #     inline: "service mysql restart"
 
-      mysql.vm.synced_folder "./configs", "/configs"
-      mysql.vm.synced_folder ".", "/vagrant", disabled: true
-    end
+    #   mysql.vm.synced_folder "./configs", "/configs"
+    #   mysql.vm.synced_folder ".", "/vagrant", disabled: true
+    # end
 
     config.vm.define "phpweb" do |phpweb|
       phpweb.vm.network "forwarded_port", guest: 8888, host: 8888
@@ -56,6 +56,10 @@ Vagrant.configure("2") do |config|
                 apt-get install -y software-properties-common && \
                 apt-add-repository --yes --update ppa:ansible/ansible && \
                 apt-get install -y ansible"
+
+      ansible.vm.provision "shell",
+        inline: "ansible-playbook -i /vagrant/configs/ansible/hosts \
+                /vagrant/configs/ansible/playbook.yml"
     end
 
 
