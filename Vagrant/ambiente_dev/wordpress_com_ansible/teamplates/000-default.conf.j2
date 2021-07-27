@@ -10,4 +10,4 @@ vagrant@vagrant-ubuntu-trusty-64:~$ cat /etc/apache2/sites-available/000-default
         #ServerName www.example.com
 
         ServerAdmin webmaster@localhost
-        DocumentRoot /var/www/wordpress
+        DocumentRoot {{ wp_installation_dir }}
