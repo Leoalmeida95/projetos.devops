@@ -1,0 +1,22 @@
+{
+"builders": [{
+    "type": "amazon-ebs",
+    "access_key": "AKIAWX3STR7I6GGX77K6",
+    "secret_key": "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",
+    "region": "us-east-1",
+    "source_ami": "ami-079f96ce4a4a7e1c7",
+    "instance_type": "t2.micro",
+    "ssh_username": "ubuntu-openjdk-8-{{timestamp}}"
+}],
+"provisioners":
+[
+    {
+        "type": "shell",
+        "inline": ["sleep 30"]
+    },
+    {
+        "type": "shell",
+        "inline": ["sudo apt-get update && sudo apt-get install openjdk-8-jdk -y"]
+    }
+]
+}
