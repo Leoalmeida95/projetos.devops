@@ -4,7 +4,11 @@ provider "aws" {
 }
 
 resource "aws_instance" "dev" {
-    ami = " ami-026c8acd92718196b"
+    count = 3
+    ami = "ami-026c8acd92718196b"
     instance_type = "t2.mico"
     key_name = "terraform-aws"
+    tags ={
+        Name = "dev${count.index}"
+    }
 }
