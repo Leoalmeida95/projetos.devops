@@ -1,6 +1,13 @@
 provider "aws" {
+    alias="us-east-1"
     versionm = "~> 2.0"
     region = "us-east-1"
+}
+
+provider "aws" {
+    alias="us-east-2"
+    versionm = "~> 2.0"
+    region = "us-east-2"
 }
 
 resource "aws_instance" "dev" {
@@ -35,11 +42,13 @@ resource "aws_instance" "dev5" {
     vpc_security_group_ids = ["${aws_security_group.acesso-ssh.id}"]
 }
 
-resource "aws_s3_bucket" "dev4" {
-  bucket = "lalmlab-dev4"
-  acl    = "private"
-
-  tags = {
-    Name = "lalmlab-dev4"
-  }
+resource "aws_instance" "dev6" {
+    provider="aws.us-east-2"
+    ami = "ami-0d8f6eb4f641ef691"
+    instance_type = "t2.mico"
+    key_name = "terraform-aws"
+    tags ={
+        Name = "dev6"
+    }
+    vpc_security_group_ids = ["${aws_security_group.acesso-ssh-us-east-2.id}"]
 }
