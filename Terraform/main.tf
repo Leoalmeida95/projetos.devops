@@ -51,4 +51,5 @@ resource "aws_instance" "dev6" {
         Name = "dev6"
     }
     vpc_security_group_ids = ["${aws_security_group.acesso-ssh-us-east-2.id}"]
+    depends_on = ["aws_dynamodb_table.dynamodb-homolog"]
 }
