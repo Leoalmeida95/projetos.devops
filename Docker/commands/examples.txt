@@ -14,6 +14,8 @@ docker run -v "[CAMINHO_VOLUME_LOCAL:]CAMINHO_VOLUME_CONTAINER" NOME_DA_IMAGEM -
 docker inspect ID_CONTAINER - retorna diversas informações sobre o container.
 docker run -p 8080:3000 -v "C:\Users\Alura\Desktop\volume-exemplo:/var/www" -w "/var/www" node npm start - roda o comando 'npm start' pro código localizado no volume, e passando o local pro comando com o -w
 docker run -p 8080:3000 -v "$(pwd):/var/www" -w "/var/www" node npm start - Mesmo comando acima pode ser rodado com pwd, sendo executado do local desejado
-
-##Dockerfile 
-docker build -t leonardoalm/node . - Cria a imagem com um nome específico
+docker build -f Dockerfile - cria uma imagem a partir de um Dockerfile.
+docker build -f CAMINHO_DOCKERFILE/Dockerfile -t NOME_USUARIO/NOME_IMAGEM - constrói e nomeia uma imagem não-oficial informando o caminho para o Dockerfile.
+docker login - inicia o processo de login no Docker Hub.
+docker push NOME_USUARIO/NOME_IMAGEM - envia a imagem criada para o Docker Hub.
+docker pull NOME_USUARIO/NOME_IMAGEM - baixa a imagem desejada do Docker Hub.
