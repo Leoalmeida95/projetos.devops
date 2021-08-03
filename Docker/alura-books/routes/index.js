@@ -9,7 +9,7 @@ var indexTemplate = require('../views/index.marko')
 
 // Busca a página e carrega os livros
 router.get('/', (req, res) => {
-    console.log("Veio até aqui!")
+    console.log("Exibindo a Home!")
     if(mongoose.connection.readyState){
         Book.find({}).then((books) => {
             res.marko(indexTemplate, {books: books})
