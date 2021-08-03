@@ -1,5 +1,5 @@
 FROM nginx:latest
-MAINTAINER Douglas Quintanilha
+LABEL Author = "Leonardo Almeida"
 COPY /public /var/www/public
 COPY /docker/config/nginx.conf /etc/nginx/nginx.conf
 RUN chmod 755 -R /var/www/public
