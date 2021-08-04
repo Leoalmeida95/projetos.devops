@@ -68,3 +68,5 @@ docker-compose up -d - levanta o compose modo deamon
 docker-compose ps - lista os servicos
 docker-compose down - pausa e remove os containers
 docker-compose restart - comandos down + up
+docker ls -s - exibe o tamanho do container
+docker history NOME_IMAGEM - mostra as camadas da imagem
