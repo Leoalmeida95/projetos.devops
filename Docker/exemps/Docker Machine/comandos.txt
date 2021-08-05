@@ -1,3 +1,8 @@
-docker-machine ls
-docker-machine create -d virtualbox vm1
-docker-machine start NOME_VM
+docker-machine ls - lista as maquinas
+docker-machine create -d virtualbox vm1 - cria a maquina
+docker-machine start NOME_VM - starta a maquina
+docker-machine ssh NOME_VM - conecta a maquina
+
+>>Comandos quando Conectado a máquina manager com ssh
+docker swarm init --advertise-addr IP_MAQUINA - inicia swarm
+docker info - mostra se o swart esta ativo na maquina

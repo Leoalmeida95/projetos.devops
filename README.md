@@ -27,3 +27,6 @@ Uma ferramenta para criar, alterar e criar versões de infraestrutura com segura
 ## Docker
 
 Um conjunto de produtos de plataforma como serviço que usam virtualização de nível de sistema operacional para entregar software em pacotes chamados contêineres. Os contêineres são isolados uns dos outros e agrupam seus próprios softwares, bibliotecas e arquivos de configuração.
+
+### Docker swarm
+O Docker Swarm é um orquestrador e é capaz de alocar e reiniciar containers de maneira automática. Cria máquinas já provisionadas para utilizar o Docker com a Docker Machine utilizando comando docker-machine create. Possibilita criação de cluster (conjunto de máquinas dividindo poder computacional).
