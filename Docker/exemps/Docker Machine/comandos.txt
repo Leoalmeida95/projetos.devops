@@ -6,3 +6,8 @@ docker-machine ssh NOME_VM - conecta a maquina
 >>Comandos quando Conectado a máquina manager com ssh
 docker swarm init --advertise-addr IP_MAQUINA - inicia swarm
 docker info - mostra se o swart esta ativo na maquina
+doker swarm join --token TOKEN IP_MANAGER - comando dado dentro de maquina woerker, transforma uma maquina qualquer em um worker de uma marquina manager
+docker swarm join-token worker - comando dentro da maquina manager, para retornar token para join entre maquinas
+docker node ls - comando dado no manager, lista os nos do swarm
+docker node rm ID_WORKER - comando dado no manager, remove worker do swarm
+docker swarm leave - comando dado no worker, altera o status da maquina worker de READY para DOWN e possibilita o manager remove-la do swarm
