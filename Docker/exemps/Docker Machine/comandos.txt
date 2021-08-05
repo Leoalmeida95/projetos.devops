@@ -5,9 +5,23 @@ docker-machine ssh NOME_VM - conecta a maquina
 
 >>Comandos quando Conectado a máquina manager com ssh
 docker swarm init --advertise-addr IP_MAQUINA - inicia swarm
-docker info - mostra se o swart esta ativo na maquina
-doker swarm join --token TOKEN IP_MANAGER - comando dado dentro de maquina woerker, transforma uma maquina qualquer em um worker de uma marquina manager
-docker swarm join-token worker - comando dentro da maquina manager, para retornar token para join entre maquinas
-docker node ls - comando dado no manager, lista os nos do swarm
-docker node rm ID_WORKER - comando dado no manager, remove worker do swarm
-docker swarm leave - comando dado no worker, altera o status da maquina worker de READY para DOWN e possibilita o manager remove-la do swarm
+docker info - mostra se o swarm esta ativo na maquina
+docker swarm join --token TOKEN IP_MANAGER - (worker) transforma uma maquina qualquer em um worker de uma marquina manager
+docker swarm join-token worker - (manager) para retornar token que permite maquina se tornar worker no swarm
+docker swarm join-token manager - (manager) para retornar token que permite maquina se tornar manager no swarm
+docker node ls - (manager) lista os nos do swarm
+docker node rm ID_WORKER - (manager) remove worker do swarm
+docker swarm leave - (worker) altera o status da maquina worker de READY para DOWN e possibilita o manager remove-la do swarm
+docker node inspect vm2 - vm1 (manger) pode assim saber o IP da vm e acessar os containers levantados dentro dela
+docker service create -p 8080:3000 NOME_IMAGEM - (manager) levanta um container como um "serviço", podendo ser acessado pelas outras máquinas do swarm
+docker service ls - lista os serviços
+docker service ps ID_SERVIÇO - mostra a maquina que está executando o serviço
+docker service rm ID_SERVIÇO - remove o serviço
+docker swarm leave - (manager/worker) a maquina deixa o swarm
+docker swarm init --force-new-cluster --advertise-addr IP_MAQUINA - inicia swarm com backup que tenha sido feito anteriormente
+docker node demote vm1 - (manager) 'rebaixa' outro manager para que sua vm possa ser excluida
+docker node update --availability drain MAQUINA_VIRTUAL - (manager) restringe uma vm para que ela não rode serviços
+docker service update --constraint-add node.role==worker ID_SERVICO - (manager) restringe o serviço para rodar apenas em vms que sejam workers
+docker service update --constraint-add node.id==ID_NÓ ID_SERVICO - (manager) restringe serviço para rodar em um nó específico
+docker service update --constraint-add node.hostname==vm4 ID_SERVICO - (manager) restringe o serviço para rodar apenas na vm4
+docker service update --constraint-rm node.id==ID_NÓ ID_SERVICO - (manager) utiliza o --constraint-rm para remover a restrição
