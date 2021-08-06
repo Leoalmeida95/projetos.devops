@@ -30,3 +30,6 @@ docker service scale ci10k3u7q6ti=4 - (manager) aloca 4 tarefas para o serviço
 docker service create -p 8080:3000 --mode global NOME_IMAGEM - (manager) cria serviço global que roda em todos os nós do swarm
 docker network create -d overlay my_overlay - (manager) ao criar uma rede própria, é possível utilizar service discovery e conectar container pelo nome além do IP
 docker network create -d overlay --attachable my_overlay - (manager) permite conectar container em scopo local
+docker stack deploy --compose-file docker-compose.yml NOME - (manager) - roda o compose dentro de uma vm
+docker stack ls - (manager) lista as stacks
+docker stack rm NOME - remove a stack
