@@ -30,3 +30,8 @@ Um conjunto de produtos de plataforma como serviço que usam virtualização de 
 
 ### Docker swarm
 O Docker Swarm é um orquestrador e é capaz de alocar e reiniciar containers de maneira automática. Cria máquinas já provisionadas para utilizar o Docker com a Docker Machine utilizando comando docker-machine create. Possibilita criação de cluster (conjunto de máquinas dividindo poder computacional).
+
+## Kubernetes
+Kubernetes é um sistema de orquestração de contêineres open-source que automatiza a implantação, o dimensionamento e a gestão de aplicações em contêineres.
+
+Uma diferença fundamental entre o Kubernetes e o Docker é que o Kubernetes deve ser executado em um cluster, enquanto o Docker é executado em um único nó. O Kubernetes é mais extenso do que o Docker Swarm e destina-se a coordenar clusters de nós em escala na produção de maneira eficiente.
