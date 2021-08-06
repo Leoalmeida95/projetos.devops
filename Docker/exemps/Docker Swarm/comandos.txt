@@ -25,3 +25,8 @@ docker service update --constraint-add node.role==worker ID_SERVICO - (manager) 
 docker service update --constraint-add node.id==ID_NÓ ID_SERVICO - (manager) restringe serviço para rodar em um nó específico
 docker service update --constraint-add node.hostname==vm4 ID_SERVICO - (manager) restringe o serviço para rodar apenas na vm4
 docker service update --constraint-rm node.id==ID_NÓ ID_SERVICO - (manager) utiliza o --constraint-rm para remover a restrição
+docker service update --replicas 4 ID_SERVICO - (manager) aloca 4 tarefas para o serviço
+docker service scale ci10k3u7q6ti=4 - (manager) aloca 4 tarefas para o serviço
+docker service create -p 8080:3000 --mode global NOME_IMAGEM - (manager) cria serviço global que roda em todos os nós do swarm
+docker network create -d overlay my_overlay - (manager) ao criar uma rede própria, é possível utilizar service discovery e conectar container pelo nome além do IP
+docker network create -d overlay --attachable my_overlay - (manager) permite conectar container em scopo local
