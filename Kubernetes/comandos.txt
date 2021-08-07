@@ -1,6 +1,9 @@
 kubectl get nodes - lista os nós do cluster
-kubectl run NOME_DADO_PRO_POD --image=NOME_IMAGEM - cria um 'pod' (container) com um nome específico e baseado em uma imagem
+kubectl run NOME_POD --image=NOME_IMAGEM - cria um 'pod' (container) com um nome específico e baseado em uma imagem
 kubectl get pods - lista os pods criados
-kubectl describe pod NOME_DADO_PRO_POD
-kubectl edit pod NOME_DADO_PRO_POD - abre arquivo .txt com arquivos de configuração do pod para edição
+kubectl describe pod NOME_POD
+kubectl edit pod NOME_POD - abre arquivo .txt com arquivos de configuração do pod para edição
 kubectl apply -f NOME_ARQUIVO_YML - roda um arquivo de definição yml e toma a ação necessária (ex: criar Pod)
+kubectl delete pod NOME_POD - remove um pod
+kubectl delete -f NOME_ARQUIVO_YML - remove o que foi criado pelo arquivo yml
+kubectl exec -it NOME_POD -- bash - entra de maneira iterativa no container do Pod
