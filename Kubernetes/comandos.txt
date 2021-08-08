@@ -11,3 +11,4 @@ kubectl get svc - lista os serviços criados
 kubectl get nodes -o wide - lista os nós criados
 kubectl delete pods --all - deleta todos os pods
 kubectl delete svc --all - deleta todos os serviços
+kubectl create configmap db-configmap --from-file=.\db-configmap.yml - cria dbconfig
