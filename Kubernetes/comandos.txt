@@ -9,3 +9,5 @@ kubectl delete -f NOME_ARQUIVO_YML - remove o que foi criado pelo arquivo yml
 kubectl exec -it NOME_POD -- bash - entra de maneira iterativa no container do Pod
 kubectl get svc - lista os serviços criados
 kubectl get nodes -o wide - lista os nós criados
+kubectl delete pods --all - deleta todos os pods
+kubectl delete svc --all - deleta todos os serviços
