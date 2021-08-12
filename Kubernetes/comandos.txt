@@ -17,3 +17,4 @@ kubectl get rs - lista os replicasets
 kubectl get deployments - lista os deployments
 kubectl rollout history deployment NOME - exibe o history do deployment (espécie de versionamento como o git)
 kubectl rollout undo deployment NOME --to-revision=VERSAO_REVISAO - retorna para uma versao específica do deployment
+kubectl delete deployment NOME - deleta um deployment
