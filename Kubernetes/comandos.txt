@@ -1,7 +1,7 @@
 kubectl get nodes - lista os nós do cluster
 kubectl run NOME_POD --image=NOME_IMAGEM - cria um 'pod' (container) com um nome específico e baseado em uma imagem
 kubectl get pods - lista os pods criados
-kubectl describe pod NOME_POD
+kubectl describe pod NOME_POD - exibe informacoes do pod
 kubectl edit pod NOME_POD - abre arquivo .txt com arquivos de configuração do pod para edição
 kubectl apply -f NOME_ARQUIVO_YML - roda um arquivo de definição yml e toma a ação necessária (ex: criar Pod)
 kubectl delete pod NOME_POD - remove um pod
@@ -12,3 +12,8 @@ kubectl get nodes -o wide - lista os nós criados
 kubectl delete pods --all - deleta todos os pods
 kubectl delete svc --all - deleta todos os serviços
 kubectl create configmap db-configmap --from-file=.\db-configmap.yml - cria dbconfig
+kubectl get rs --watch - monitora os replicasets criados em 'tempo real'
+kubectl get rs - lista os replicasets
+kubectl get deployments - lista os deployments
+kubectl rollout history deployment NOME - exibe o history do deployment (espécie de versionamento como o git)
+kubectl rollout undo deployment NOME --to-revision=VERSAO_REVISAO - retorna para uma versao específica do deployment
