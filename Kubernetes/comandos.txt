@@ -18,3 +18,8 @@ kubectl get deployments - lista os deployments
 kubectl rollout history deployment NOME - exibe o history do deployment (espécie de versionamento como o git)
 kubectl rollout undo deployment NOME --to-revision=VERSAO_REVISAO - retorna para uma versao específica do deployment
 kubectl delete deployment NOME - deleta um deployment
+kubectl get sc - lista os storage classes
+kubectl get pvc - lista os persistentVolumeClaims
+kubectl get pv - lista os persistentVolumes
+kubectl delete pvc --all - deleta todos os persistentVolumeClaims
+kubectl delete sc --all  - deleta todos os storage classes
