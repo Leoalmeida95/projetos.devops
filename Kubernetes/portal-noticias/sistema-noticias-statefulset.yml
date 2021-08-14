@@ -17,6 +17,18 @@ spec:
           envFrom:
             - configMapRef:
                 name: sistema-configmap
+          volumeMounts:
+            - mountPath: imagens
+              name: /var/www/html/uploads
+            - mountPath: sessao
+              name: /tmp
+      volumes:
+        - name: imagens
+          persistentVolumeClaim:
+            claimName: imagens-pvc
+        - name: sessao
+          persistentVolumeClaim:
+            claimName: sessao-pvc
   replicas: 1
   selector:
     matchLabels:
