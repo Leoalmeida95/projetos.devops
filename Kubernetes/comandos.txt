@@ -24,3 +24,4 @@ kubectl get pv - lista os persistentVolumes
 kubectl delete pvc --all - deleta todos os persistentVolumeClaims
 kubectl delete sc --all  - deleta todos os storage classes
 kubectl delete deployments NOME - deleta um deployment
+kubectl get hpa - lista os HorizontalPodAutoscaler
