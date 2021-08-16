@@ -30,3 +30,8 @@ O Docker Swarm é um orquestrador e é capaz de alocar e reiniciar containers de
 Kubernetes é um sistema de orquestração de contêineres open-source que automatiza a implantação, o dimensionamento e a gestão de aplicações em contêineres.
 
 Uma diferença fundamental entre o Kubernetes e o Docker é que o Kubernetes deve ser executado em um cluster, enquanto o Docker é executado em um único nó. O Kubernetes é mais extenso do que o Docker Swarm e destina-se a coordenar clusters de nós em escala na produção de maneira eficiente.
+
+## CI/CD
+
+### Integração Contínua
+Integração ontínua (CI) é uma prática de desenvolvimento que requer que os desenvolvedores integrem o código em um repositório compartilhado constantemente, evitando acúmolo de alterações.
