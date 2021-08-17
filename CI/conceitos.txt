@@ -1,0 +1,11 @@
+Alguns branching models famosos são:
+
+- Temporários (branches locais) São branches localizados apenas na máquina local e deverão se extiguir, são utilizados para organizar fluxos de trabalho e depois realizar o commit.
+
+- Feature Branches São utilizados para implementar funcionalidades ou orientar tarefas.
+
+- Historical Branches (mastaer e develop) As alterações ficam organizadas em commits baseados na cronologia no caso de um projeto de software.
+
+- Environment Branches (Staging e Production)] Existem branches que são baseados no ambiente, isto é, em que espaço é realizado o deploy.
+
+- Maintenance Branches (Release e Hotfix) Temos, ainda, os branches de manutenção do sistema.
