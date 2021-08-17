@@ -9,3 +9,5 @@ Alguns branching models famosos são:
 - Environment Branches (Staging e Production)] Existem branches que são baseados no ambiente, isto é, em que espaço é realizado o deploy.
 
 - Maintenance Branches (Release e Hotfix) Temos, ainda, os branches de manutenção do sistema.
+
+O mais popular - e mais complexo - modelo de trabalho é o Git Flow. Obviamente, apensar da popularidade do modelo, os problemas de gerar muitos intermédios são os mesmos.
