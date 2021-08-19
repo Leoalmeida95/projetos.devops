@@ -13,9 +13,21 @@ Alguns branching models famosos são:
 O mais popular - e mais complexo - modelo de trabalho é o Git Flow. Obviamente, apensar da popularidade do modelo, os problemas de gerar muitos intermédios são os mesmos.
 
 
+Feature Flags e Branch by Abstraction
+
+- O que é o Feature Flag? 
+Suponhamos uma nova funcionalidade em nosso projeto que terá um tempo longo de implementação. Contudo, não queremos criar uma nova ramificação para esse processo, queremos trabalhar diretamente com o master ainda que o código não esteja completo.
+
+- Branch by Abstraction
+Apesar do nome, não envolve a criação de uma nova ramificação. Temos um módulo ligado, uma parte da aplicação utiliza uma biblioteca antiga e precisa ser substituída. Esse é um processo lento, e muitos elementos precisam ser alterados.
+
+O primeiro passo é introduzir uma abstração no código principal, isto é, uma camada intermediária para isolar o código que utiliza o módulo, portanto todas as chamadas deverão passar pela camada de abstração. Essa camada pode ser uma interface, várias ou mesmo uma classe que realiza delegações.
+
+Uma vez que é aplicada essa técnica de desacoplamento, podemos gradativamente a re-implementação. Podemos utilizar um módulo legado para o que é de fato utilizava o módulo antigo.
+
 
 Merge vs. Rebase 
 
-O comando clássico para essa situação é o merge, e então ocorre o chamado "merge commit", cria-se um novo commit que representa esse momento de sincronização.
+- O comando clássico para essa situação é o merge, e então ocorre o chamado "merge commit", cria-se um novo commit que representa esse momento de sincronização.
 
-Outra maneira de sincronizar o branch é pelo uso do rebase. Neste caso, a ideia é que se mude a base do commit, e então as modificações são aplicadas nessa nova base.
+- Outra maneira de sincronizar o branch é pelo uso do rebase. Neste caso, a ideia é que se mude a base do commit, e então as modificações são aplicadas nessa nova base.
