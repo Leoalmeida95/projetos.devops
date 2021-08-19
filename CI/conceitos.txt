@@ -11,3 +11,11 @@ Alguns branching models famosos são:
 - Maintenance Branches (Release e Hotfix) Temos, ainda, os branches de manutenção do sistema.
 
 O mais popular - e mais complexo - modelo de trabalho é o Git Flow. Obviamente, apensar da popularidade do modelo, os problemas de gerar muitos intermédios são os mesmos.
+
+
+
+Merge vs. Rebase 
+
+O comando clássico para essa situação é o merge, e então ocorre o chamado "merge commit", cria-se um novo commit que representa esse momento de sincronização.
+
+Outra maneira de sincronizar o branch é pelo uso do rebase. Neste caso, a ideia é que se mude a base do commit, e então as modificações são aplicadas nessa nova base.
