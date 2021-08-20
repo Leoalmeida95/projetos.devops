@@ -31,3 +31,6 @@ Merge vs. Rebase
 - O comando clássico para essa situação é o merge, e então ocorre o chamado "merge commit", cria-se um novo commit que representa esse momento de sincronização.
 
 - Outra maneira de sincronizar o branch é pelo uso do rebase. Neste caso, a ideia é que se mude a base do commit, e então as modificações são aplicadas nessa nova base.
+
+Self Testing
+- Com as alterações que realizamos o tempo todo em nosso software, como podemos garantir a qualidade do código? Testes. No caso da integração contínua, precisaremos utilizar testes automatizados. O ideal é que a cada alteração, seja realizado um novo teste automatizado, para termos certeza de nenhum problema será gerado.
