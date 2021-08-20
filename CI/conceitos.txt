@@ -10,7 +10,7 @@ Alguns branching models famosos são:
 
 - Maintenance Branches (Release e Hotfix) Temos, ainda, os branches de manutenção do sistema.
 
-O mais popular - e mais complexo - modelo de trabalho é o Git Flow. Obviamente, apensar da popularidade do modelo, os problemas de gerar muitos intermédios são os mesmos.
+- O mais popular - e mais complexo - modelo de trabalho é o Git Flow. Obviamente, apensar da popularidade do modelo, os problemas de gerar muitos intermédios são os mesmos.
 
 
 Feature Flags e Branch by Abstraction
@@ -33,4 +33,17 @@ Merge vs. Rebase
 - Outra maneira de sincronizar o branch é pelo uso do rebase. Neste caso, a ideia é que se mude a base do commit, e então as modificações são aplicadas nessa nova base.
 
 Self Testing
+
 - Com as alterações que realizamos o tempo todo em nosso software, como podemos garantir a qualidade do código? Testes. No caso da integração contínua, precisaremos utilizar testes automatizados. O ideal é que a cada alteração, seja realizado um novo teste automatizado, para termos certeza de nenhum problema será gerado.
+
+- Uma técnica comum é executar o que chamamos de smoke tests. Na prática, trata-se de uma seleção de testes que garantem que as funcionalidades mais importantes do sistema estejam operando corretamente.
+
+Build automatizado
+
+- Build a cada commit
+
+- Automatização
+
+- Build independente da IDE
+
+- Toco conteúdo necessário armazenado no repositório
