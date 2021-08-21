@@ -6,3 +6,11 @@ Práticas
 - A entrega contínua é uma evolução da integração contínua e envolve todo o ciclo do projeto, incluindo equipes de QA, deploy e operações
 
 - A diferença entre a entrega contínua e o deploy contínuo é, que no deploy contínuo todas as alterações realmente entra em produção, o tempo todo
+
+
+Antipattern:
+- Gerenciamento manual do ambiente
+
+- Deploy manual
+
+- Deploy apenas no fim do ciclo
