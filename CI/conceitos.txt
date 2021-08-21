@@ -1,5 +1,4 @@
 Alguns branching models famosos são:
-
 - Temporários (branches locais) São branches localizados apenas na máquina local e deverão se extiguir, são utilizados para organizar fluxos de trabalho e depois realizar o commit.
 
 - Feature Branches São utilizados para implementar funcionalidades ou orientar tarefas.
@@ -14,7 +13,6 @@ Alguns branching models famosos são:
 
 
 Feature Flags e Branch by Abstraction
-
 - O que é o Feature Flag? 
 Suponhamos uma nova funcionalidade em nosso projeto que terá um tempo longo de implementação. Contudo, não queremos criar uma nova ramificação para esse processo, queremos trabalhar diretamente com o master ainda que o código não esteja completo.
 
@@ -27,21 +25,18 @@ Uma vez que é aplicada essa técnica de desacoplamento, podemos gradativamente 
 
 
 Merge vs. Rebase 
-
 - O comando clássico para essa situação é o merge, e então ocorre o chamado "merge commit", cria-se um novo commit que representa esse momento de sincronização.
 
 - Outra maneira de sincronizar o branch é pelo uso do rebase. Neste caso, a ideia é que se mude a base do commit, e então as modificações são aplicadas nessa nova base.
 
 
 Self Testing
-
 - Com as alterações que realizamos o tempo todo em nosso software, como podemos garantir a qualidade do código? Testes. No caso da integração contínua, precisaremos utilizar testes automatizados. O ideal é que a cada alteração, seja realizado um novo teste automatizado, para termos certeza de nenhum problema será gerado.
 
 - Uma técnica comum é executar o que chamamos de smoke tests. Na prática, trata-se de uma seleção de testes que garantem que as funcionalidades mais importantes do sistema estejam operando corretamente.
 
 
 Build automatizado
-
 - Build a cada commit
 
 - Automatização
@@ -52,14 +47,12 @@ Build automatizado
 
 
 Servidor de CI
-
 - Em algum momento precisamos encontrar um local que realmente será capaz de testar todo o projeto, e este é o CI Daemon ou server de integração. Esse servidor irá garantir que a cada modificação seja realizado um novo teste, então o repositório é sempre checado e builds contínuos são uma realidade.
 
 - É tarefa de toda uma equipe resolver um problema no build o mais rápido possível, afinal não poderá ser realizados novos commits até que o build esteja estável e confiável novamente.
 
 
 Resumo
-
 - comitar diariamente o seu código no "mainline" do projeto
 
 - Build e testes devem ser automatizados e traz confiança que o software está correto

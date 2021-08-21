@@ -44,3 +44,13 @@ Elementos da Entrega contínua
 - Arquitetura
     Novas Propriedades: testability, deployability
     SOLID, Services, 12 Factor App
+
+
+Boas Práticas
+- Pipeline é a únia forma de deploy e mantê-lo da forma mais rápida possível
+
+- Build apenas uma vez e independente do ambiente
+
+- Ambientes iguais/semelhantes e efêmeros (temporários)
+
+- deploy para ambientes de maneira igual
