@@ -32,11 +32,13 @@ Merge vs. Rebase
 
 - Outra maneira de sincronizar o branch é pelo uso do rebase. Neste caso, a ideia é que se mude a base do commit, e então as modificações são aplicadas nessa nova base.
 
+
 Self Testing
 
 - Com as alterações que realizamos o tempo todo em nosso software, como podemos garantir a qualidade do código? Testes. No caso da integração contínua, precisaremos utilizar testes automatizados. O ideal é que a cada alteração, seja realizado um novo teste automatizado, para termos certeza de nenhum problema será gerado.
 
 - Uma técnica comum é executar o que chamamos de smoke tests. Na prática, trata-se de uma seleção de testes que garantem que as funcionalidades mais importantes do sistema estejam operando corretamente.
+
 
 Build automatizado
 
@@ -48,8 +50,18 @@ Build automatizado
 
 - Toco conteúdo necessário armazenado no repositório
 
+
 Servidor de CI
 
 - Em algum momento precisamos encontrar um local que realmente será capaz de testar todo o projeto, e este é o CI Daemon ou server de integração. Esse servidor irá garantir que a cada modificação seja realizado um novo teste, então o repositório é sempre checado e builds contínuos são uma realidade.
 
 - É tarefa de toda uma equipe resolver um problema no build o mais rápido possível, afinal não poderá ser realizados novos commits até que o build esteja estável e confiável novamente.
+
+
+Resumo
+
+- comitar diariamente o seu código no "mainline" do projeto
+
+- Build e testes devem ser automatizados e traz confiança que o software está correto
+
+- Quando um build quebrar, a equipe o deve consertar rapidamente. Tempo ideial de 10 minutos.
