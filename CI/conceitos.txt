@@ -47,3 +47,9 @@ Build automatizado
 - Build independente da IDE
 
 - Toco conteúdo necessário armazenado no repositório
+
+Servidor de CI
+
+- Em algum momento precisamos encontrar um local que realmente será capaz de testar todo o projeto, e este é o CI Daemon ou server de integração. Esse servidor irá garantir que a cada modificação seja realizado um novo teste, então o repositório é sempre checado e builds contínuos são uma realidade.
+
+- É tarefa de toda uma equipe resolver um problema no build o mais rápido possível, afinal não poderá ser realizados novos commits até que o build esteja estável e confiável novamente.
