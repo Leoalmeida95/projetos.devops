@@ -15,7 +15,32 @@ Antipattern:
 
 - Deploy apenas no fim do ciclo
 
+
 CI vs. CD
 - Na entrega contínua as modificações e atualizações não são enviadas prontamente para a produção, isto é, ficam "paradas" na homologação. Não existe uma razão técnica para segurar estas alterações, elas são de fato seguras e funcionais, mas os motivos envolvem estratégias de negócio.
 
 - No caso do deploy contínuo, as modificações vão de fato para o ambiente de produção. Veremos ao longo do curso que existem formas de ocultar funcionalidades que estão em produção.
+
+
+Princípios
+I. Automatize ** *II. Versione * **III. Repita
+
+V. Defina "done"
+
+VI. Crie delivery team
+
+VII. Use melhoria contínua
+
+
+Elementos da Entrega contínua
+- Cultura DevOps
+    feedback, colaboração, confiança
+    melhora e apredizagem continua
+
+- Patterns
+    deployment pipeline
+    deploy patterns (blue/green, canary, feature toggle..)
+
+- Arquitetura
+    Novas Propriedades: testability, deployability
+    SOLID, Services, 12 Factor App
