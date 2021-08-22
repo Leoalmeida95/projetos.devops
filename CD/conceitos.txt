@@ -54,3 +54,13 @@ Boas Práticas
 - Ambientes iguais/semelhantes e efêmeros (temporários)
 
 - deploy para ambientes de maneira igual
+
+
+Commit Stage
+- unit tests, build, analysis
+- Não demora mais de 10 min
+    não teste UI, evite DB, evite async
+    use repo de artefato como cache
+- Todo time é responsável
+- Mantenha código de qualidade para TODOS os scripts
+- Mantenha os ambiente atualizados
