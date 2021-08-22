@@ -58,9 +58,29 @@ Boas Práticas
 
 Commit Stage
 - unit tests, build, analysis
+
 - Não demora mais de 10 min
     não teste UI, evite DB, evite async
     use repo de artefato como cache
+
 - Todo time é responsável
+
 - Mantenha código de qualidade para TODOS os scripts
+
 - Mantenha os ambiente atualizados
+
+
+Testes de aceitação Automatizados
+- Equipe define as especificações (analistas,qa,dev)
+
+- Responsabilidade a equipe
+
+- Smoke tests para o ambiente
+
+- Mock de sistemas externos
+
+- Bons requisitos
+
+- Boas práticas no design e implementação de testes
+
+- Desempenho não é o mais importante
