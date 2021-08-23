@@ -94,3 +94,11 @@ Testes de homologação
 - Usabilidade contínua
 
 - Equipe participativa
+
+
+Testes de carga
+- Testar o quanto de requisições de um determinado cenário a aplicação aguenta
+
+- Exemplo de software: Jmeter
+
+- Utilizam ferramentas de monitoramento
