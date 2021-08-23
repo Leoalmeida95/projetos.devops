@@ -86,7 +86,7 @@ Testes de aceitação Automatizados
 - Desempenho não é o mais importante
 
 
-Testes de homologação
+Testes de homologação (User Acceptance Testing Stage)
 *- Testes manuais pelo cliente * O cliente consegue usar o sistema de acordo com o esperado? Realiza as ações requisitadas? Apresenta dificuldade
 
 - Validar o software
@@ -96,9 +96,31 @@ Testes de homologação
 - Equipe participativa
 
 
-Testes de carga
+Testes de carga (Capacity Testing Stage)
 - Testar o quanto de requisições de um determinado cenário a aplicação aguenta
 
 - Exemplo de software: Jmeter
 
 - Utilizam ferramentas de monitoramento
+
+
+Releases de baixo risco
+- Deploy e pipeline desde a primeira interação em ambientes similares.
+
+- Automação, one-click deploy e smoke test ambiente
+
+- Aspectos arquiteturais: testability e deployability
+
+- Devemos desacoplar o deploy do release, e para isso existem estratégias como:
+    Blue/Green Deployment
+    Canary Releases
+    Feature Toggles (Feature Flags)
+
+- Deploy vs. Realease
+    Deploy:
+        1) Ambiente
+        2) Instalação de SW 
+        3) Configuração de SW
+    Release:
+        - Publicação (rollout)
+        - Deixar visível para o cliente
