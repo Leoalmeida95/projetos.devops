@@ -124,3 +124,17 @@ Releases de baixo risco
     Release:
         - Publicação (rollout)
         - Deixar visível para o cliente
+
+
+Blue Green Deployment
+- O ambiente com a versão estável é o Blue e fica no ar
+
+- O ambiente com a nova versão é o green
+
+- Existe um switch que troca entre uma versão e outra caso haja algum problema
+
+
+Canary Release/Feature Toggles
+- Similar ao Blue/Green, mas apenas "uma parte" dos usuários irá utilizar o green. Após ter certeza, todos serão migrados para o green.
+
+- Exemplo de usuários que aceitam utilizar versão "beta" de um aplicativo (Feature Toggles)
