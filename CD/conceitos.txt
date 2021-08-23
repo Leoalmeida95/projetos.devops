@@ -84,3 +84,13 @@ Testes de aceitação Automatizados
 - Boas práticas no design e implementação de testes
 
 - Desempenho não é o mais importante
+
+
+Testes de homologação
+*- Testes manuais pelo cliente * O cliente consegue usar o sistema de acordo com o esperado? Realiza as ações requisitadas? Apresenta dificuldade
+
+- Validar o software
+
+- Usabilidade contínua
+
+- Equipe participativa
