@@ -35,3 +35,9 @@ Uma diferença fundamental entre o Kubernetes e o Docker é que o Kubernetes dev
 
 ### Integração Contínua
 Integração ontínua (CI) é uma prática de desenvolvimento que requer que os desenvolvedores integrem o código em um repositório compartilhado constantemente, evitando acúmolo de alterações.
+
+### Entrega Contínua
+Entrega contínua (CD) é uma abordagem na qual os times de desenvolvimento lançam produtos de qualidade de forma frequente, previsível e automatizada. Em vez de fazer grandes entregas de uma vez, fazem várias pequenas e rápidas
+
+## Jenkins
+O Jenkins C.I. é uma aplicação web de Integração Contínua que pode ser instalada em qualquer máquina e serve, principalmente, para executar os testes e criar os artefatos de um projeto de software.
