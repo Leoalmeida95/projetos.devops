@@ -41,3 +41,8 @@ Entrega contínua (CD) é uma abordagem na qual os times de desenvolvimento lan�
 
 ## Jenkins
 O Jenkins C.I. é uma aplicação web de Integração Contínua que pode ser instalada em qualquer máquina e serve, principalmente, para executar os testes e criar os artefatos de um projeto de software.
+
+
+## Gitlab
+
+O GitLab é um gerenciador de repositório de software baseado em git, com suporte a Wiki, gerenciamento de tarefas e CI/CD. GitLab é similar ao GitHub, mas o GitLab permite que os desenvolvedores armazenem o código em seus próprios servidores, ao invés de servidores de terceiros.
