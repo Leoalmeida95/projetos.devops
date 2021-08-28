@@ -1,4 +1,12 @@
-tarefa1:
-  script:
-  - echo "hello world"
-  - echo date
+image: docker:stable
+
+services:
+- docker:dind
+
+before_script:
+- docker info
+
+build-docker:
+    stage: build
+    script: 
+    - docker build -t minha-imagem .
