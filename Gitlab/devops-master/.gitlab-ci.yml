@@ -21,10 +21,26 @@ build-docker:
     - docker push leoalmeida95/minha-imagem:latest
 
 build-project:
+    services:
+    - docker:dind
+    - mysql:5.7
+    variables:
+      MYSQL_USER: devops_dev
+      MYSQL_PASSWORD: mestre
+      MYSQL_DATABASE: todo_dev
+      MYSQL_ROOT_PASSWORD: senha
+      SECRET_KEY: 'secret_key'
+
+      DB_NAME: 'todo_dev'
+      DB_USER: 'devops_dev'
+      DB_PASSWORD: 'mestre'
+      DB_PORT: '3306'
+
     stage: build
     tags: 
     - executor-tarefas
     dependencies: 
     - build-docker
     script: 
-    - echo "runner"
+    - python manage.py makemigrations
+    - python manage.py migrate
