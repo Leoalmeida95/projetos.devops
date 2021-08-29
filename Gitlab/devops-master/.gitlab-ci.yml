@@ -21,20 +21,22 @@ build-docker:
     - docker push leoalmeida95/minha-imagem:latest
 
 build-project:
+    image: leoalmeida95/minha-imagem:latest
     services:
     - docker:dind
     - mysql:5.7
     variables:
-      MYSQL_USER: devops_dev
-      MYSQL_PASSWORD: mestre
-      MYSQL_DATABASE: todo_dev
-      MYSQL_ROOT_PASSWORD: senha
-      SECRET_KEY: 'secret_key'
+      MYSQL_USER: $DB_USER
+      MYSQL_PASSWORD: $DB_PASSWORD
+      MYSQL_DATABASE: $DB_DATABASE
+      MYSQL_ROOT_PASSWORD: $DB_ROOT_PASSWORD
 
-      DB_NAME: 'todo_dev'
-      DB_USER: 'devops_dev'
-      DB_PASSWORD: 'mestre'
+      DB_NAME: $DB_DATABASE
+      DB_USER: $DB_USER
+      DB_PASSWORD: $DB_PASSWORD
       DB_PORT: '3306'
+      DB_HOST: 'mysql'
+      SECRET_KEY: $DB_SECRET_KEY
 
     stage: build
     tags: 
@@ -44,3 +46,29 @@ build-project:
     script: 
     - python manage.py makemigrations
     - python manage.py migrate
+
+test-project:
+    image: leoalmeida95/minha-imagem:latest
+    stage: test
+    services:
+    - docker:dind
+    - mysql:5.7
+    variables:
+      MYSQL_USER: $DB_USER
+      MYSQL_PASSWORD: $DB_PASSWORD
+      MYSQL_DATABASE: $DB_DATABASE
+      MYSQL_ROOT_PASSWORD: $DB_ROOT_PASSWORD
+
+      DB_NAME: $DB_DATABASE
+      DB_USER: $DB_USER
+      DB_PASSWORD: $DB_PASSWORD
+      DB_PORT: '3306'
+      DB_HOST: 'mysql'
+      SECRET_KEY: $DB_SECRET_KEY
+
+    dependencies: 
+    - build-project
+    tags:
+    - executor-tarefas
+    script: 
+    - python -m unittest setUp
