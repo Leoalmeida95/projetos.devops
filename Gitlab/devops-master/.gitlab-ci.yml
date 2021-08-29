@@ -9,7 +9,7 @@ stages:
 build-docker:
     services:
     - docker:dind
-
+    retry: 2
     before_script:
     - docker info
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD
@@ -25,6 +25,7 @@ build-project:
     services:
     - docker:dind
     - mysql:5.7
+    retry: 2
     variables:
       MYSQL_USER: $DB_USER
       MYSQL_PASSWORD: $DB_PASSWORD
@@ -72,3 +73,14 @@ test-project:
     - executor-tarefas
     script: 
     - python -m unittest setUp
+
+deploy-project: 
+    stage: deploy
+    tags:
+    - executor-deploy
+    dependencies: 
+    - test-docker
+    script: 
+    - tar cfz arquivos.tgz *
+    - scp arquivos.tgz leoal@192.168.1.34:/Users/shared/deploys/
+    - ssh leoal@192.168.1.34 'cd /Users/shared/deploys/; tar xfz arquivos.tgz; /usr/local/bin/docker-compose up -d'

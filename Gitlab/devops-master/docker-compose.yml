@@ -11,7 +11,7 @@ services:
        MYSQL_PASSWORD: 'mestre'
        MYSQL_ROOT_PASSWORD: 'senha'
   web:
-    image: aluracursos/django_todolist_image_build
+    image: leoalmeida95/minha-imagem:latest
     volumes:
       - ./env:/usr/src/app/to_do/.env
     ports:
