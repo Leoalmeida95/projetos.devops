@@ -1,0 +1,7 @@
+Métricas imporntantes sobre Monitoramento
+- Disponibilidade
+- Escalabilidade
+- Desempenho
+- Custo
+- SLA (Service Level Agreement)
+- NOC
