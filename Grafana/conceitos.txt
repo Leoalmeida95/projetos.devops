@@ -6,6 +6,10 @@ Métricas imporntantes sobre Monitoramento
 - SLA (Service Level Agreement)
 - NOC
 
+Analise de Métricas
+- Prever problemas com dados estatísticos
+- Monitorar dados relevantes da apalicação
+- Preparar a aplicação para períodos críticos do ano
 
 Levantando container Grafana
 - docker run -d --user $ID -v /home/vagrant/volumes/grafana/:/var/lib/grafana -p 3000:3000 --name=grafana --network=grafana-net grafana/grafana
