@@ -24,3 +24,8 @@ Instalando Telegraf
 - echo "deb https://repos.influxdata.com/${DISTRIB_ID,,} ${DISTRIB_CODENAME} stable" | sudo tee /etc/apt/sources.list.d/influxdb.list
 - sudo apt-get update && sudo apt-get install apt-transport-https
 - sudo apt-get install telegraf
+
+Estressando CPU para teste de comportamento
+- sudo apt-get install stress-ng -y
+- stress0-ng -c 0 -l 95
+- Após instalação e comando acima, o uso da CPU começa aumentar e o gráfico reflete o consumo
