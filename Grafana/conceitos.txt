@@ -29,3 +29,11 @@ Estressando CPU para teste de comportamento
 - sudo apt-get install stress-ng -y
 - stress0-ng -c 0 -l 95
 - Após instalação e comando acima, o uso da CPU começa aumentar e o gráfico reflete o consumo
+
+
+Como levantar o Grafana
+- Dentro da pasta do projeto: vagrant up
+- Vagrant ssh
+- docker ps -a (ve os containers desligados)
+- docker start grafana (considerando que o container ja havia sido levatando)
+- docker start influxdb
