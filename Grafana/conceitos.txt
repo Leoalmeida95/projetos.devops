@@ -45,6 +45,14 @@ Adicionar Docker as métricas do telegraf
     total = false
 - sudo service telegraf status
 
+Intalando Apache 
+- sudo apt-get install apache2 -y
+- sudo usermod -aG adm telegraf
+- Posteriormente, deve-se editar o telegraf.conf para passar a monitorar os dados do apache
+- Exemplo de query para montar gráfico do grafana: SELECT count("request") FROM "apache_access_log" WHERE ("host" =~ /^$server$/)  AND "resp_code" = '404'  AND $timeFilter AND "agent" != 'Go-http-client/1.1' AND agent != 'worldping-api'
+- Estressando a quantidade de requests (for i in {1..501}; do curl http://localhost/  > /dev/null 2>&1;done)
+- Estressando a quantidade de requests invalidos (for i in {1..501}; do curl http://localhost/alura  > /dev/null 2>&1;done)
+
 Como levantar o Grafana
 - Dentro da pasta do projeto: vagrant up
 - Vagrant ssh
