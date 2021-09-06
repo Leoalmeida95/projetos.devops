@@ -33,6 +33,18 @@ Estressando CPU para teste de comportamento
 Estressando memória para teste de comportamento
 - stress-ng --vm-bytes $(awk '/MemAvailable/{printf "%d\n", $2 * 0.9;}' < /proc/meminfo)k --vm-keep -m 1
 
+Adicionar Docker as métricas do telegraf
+- sudo usermod -aG docker telegraf
+- cat telegraf.conf | grep -A 45 inputs.docker | egrep -v "^#"
+    [[inputs.docker]]
+    endpoint = "unix:///var/run/docker.sock"
+    container_names = []
+    container_name_include = []
+    container_name_exclude = []
+    timeout = "5s"
+    total = false
+- sudo service telegraf status
+
 Como levantar o Grafana
 - Dentro da pasta do projeto: vagrant up
 - Vagrant ssh
