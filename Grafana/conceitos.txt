@@ -30,6 +30,8 @@ Estressando CPU para teste de comportamento
 - stress0-ng -c 0 -l 95
 - Após instalação e comando acima, o uso da CPU começa aumentar e o gráfico reflete o consumo
 
+Estressando memória para teste de comportamento
+- stress-ng --vm-bytes $(awk '/MemAvailable/{printf "%d\n", $2 * 0.9;}' < /proc/meminfo)k --vm-keep -m 1
 
 Como levantar o Grafana
 - Dentro da pasta do projeto: vagrant up
@@ -37,3 +39,4 @@ Como levantar o Grafana
 - docker ps -a (ve os containers desligados)
 - docker start grafana (considerando que o container ja havia sido levatando)
 - docker start influxdb
+- abrir no navegador em http://192.168.33.10:3000
